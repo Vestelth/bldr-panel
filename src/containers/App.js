@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import profileData from '../data.json'
-import './App.css';
 
 import Profile from '../components/Profile/Profile'
 
