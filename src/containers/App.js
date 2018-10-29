@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import profileData from '../data.json'
+import data from '../data.json'
 
 import Profile from '../components/Profile/Profile'
 
 class App extends Component {
-  state = profileData
+  state = {data}
   
   logData = () => {
-    console.log(this.state.data)
+    console.log(this.state)
   }
 
   render() {
     return (
       <div className="App">
-        <Profile data={this.state['harvey_spencer']} />
+        <Profile data={this.state.data[0]} />
       </div>
     )
   }

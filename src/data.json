@@ -1,9 +1,9 @@
 
-{
-    "harvey_spencer" : {
+[
+    {
         "id"      : "hs01",
         "user"    : "Neil DeGrasse",
-        "avatar"  : "neil-hands.jpg",
+        "img"     : "neil-hands.jpg",
         "city"    : "New York",
         "country" : "USA",
 
@@ -34,6 +34,6 @@
             }
         ]
     }
-}
+]
 
 

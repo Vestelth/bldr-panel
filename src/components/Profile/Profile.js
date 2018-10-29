@@ -1,6 +1,8 @@
 import React from 'react'
 import './Profile.css'
-import avatar from '../../assets/img/neil-hands.jpg'
+import photo from '../../assets/img/neil-hands.jpg'
+import heart from '../../assets/icons/heart.svg'
+import fullHeart from '../../assets/icons/heart-full.svg'
 
 const Profile = ({data}) => {
     const logFunction = () => {
@@ -10,15 +12,15 @@ const Profile = ({data}) => {
     logFunction()
 
     return (
-        <div className="Profile">
-            <header className="Profile-header">
+        <div className="Profile tile">
+            <header className="Profile-header tile">
 
                 <div className="Profile-info">
                     <div className="img-wrapper">
-                        <img className="Profile-img" src={avatar} alt="avatar"/>
+                        <img className="Profile-img" src={photo} alt="avatar"/>
                     </div>
                     <div className="text-wrapper">
-                        <h1>{data.user} <i className="icon-like">{'<3'}</i></h1>
+                        <h1>{data.user} <img src={heart} alt=""/></h1>
                         <p className="location">{data.city}, {data.country}</p>
                     </div>
 
@@ -44,7 +46,7 @@ const Profile = ({data}) => {
 
             </header>
 
-            <div className="Profile-comments">
+            <div className="Profile-comments tile">
                 <div className="comment">
                     <p>comment here</p>
                 </div>

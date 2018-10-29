@@ -2,14 +2,14 @@
 
 }
 
-.Profile-tile {
+.tile {
     background-color: #fff;
     box-shadow: 0 0 4px 0 rgba(172, 172, 172, .5);
     border-radius: 5px;
 }
 
 .Profile-header {
-
+    padding: 20px 22px 20px 20px;
 }
 
 .Profile-header .img-wrapper {
@@ -37,7 +37,6 @@
 }
 
 
-
 .Profile-header .Profile-stats .btn.btn-follow {
     text-transform: uppercase;
     color: #fff;
@@ -50,6 +49,8 @@
     cursor: pointer;
 }
 
+
+
 .Profile-comments {
-    
+    padding-top: 25px;
 }
