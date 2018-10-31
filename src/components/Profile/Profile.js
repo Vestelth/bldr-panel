@@ -1,33 +1,47 @@
 import React from 'react'
+
+import Comments from './Comments/Comments'
+import ProfileHeader from './ProfileHeader/ProfileHeader'
+
 import './Profile.css'
 import photo from '../../assets/img/neil-hands.jpg'
-import heart from '../../assets/icons/heart.svg'
-import fullHeart from '../../assets/icons/heart-full.svg'
 
-const Profile = ({data}) => {
-    const logFunction = () => {
-        console.log(data)
+// import heartFull from '../../assets/icons/heart-full.svg'
+import heart from '../../assets/icons/heart.svg'
+import share from '../../assets/icons/share.svg'
+
+
+const Profile = ({data, handleFollowClick, handleLikeClick, index}) => {
+    // icon bgs
+    const heartIcon = {
+        backgroundImage: `url(${heart})`
+    }
+    // const heartFullIcon = {
+        // backgroundImage: `url(${heartFull})`
+    // }
+    const shareIcon = {
+        backgroundImage: `url(${share})`
     }
 
-    logFunction()
-
     return (
-        <div className="Profile tile">
-            <header className="Profile-header tile">
+        <div className="profile tile">
+            <ProfileHeader />
 
-                <div className="Profile-info">
+            <header className="profile-header tile">
+
+                <div className="profile-info">
                     <div className="img-wrapper">
-                        <img className="Profile-img" src={photo} alt="avatar"/>
+                        <img className="profile-img" src={photo} alt="avatar"/>
                     </div>
                     <div className="text-wrapper">
-                        <h1>{data.user} <img src={heart} alt=""/></h1>
+                        <h3>{data.user}<a href="#" onClick={(event) => handleLikeClick(event, index)}><i style={ heartIcon } className="icon heart-icon" /></a></h3>
                         <p className="location">{data.city}, {data.country}</p>
                     </div>
 
-                    <span className="share-profile">[=]</span>
+                    <a href="#"><i style={shareIcon} className="icon share-icon"></i></a>
                 </div>
 
-                <div className="Profile-stats">
+                <div className="profile-stats">
                     <div className="stats-elem likes">
                         <span className="amount">{data.stats.likes}</span> 
                         <span className="text">Likes</span>
@@ -38,20 +52,15 @@ const Profile = ({data}) => {
                     </div>
                     <div className="stats-elem followers">
                         <span className="amount">{data.stats.followers}</span> 
-                        <span className="text">Likes</span>
+                        <span className="text">Followers</span>
                     </div>
 
-                    <button className="btn btn-follow" type="button">Follow</button>
+                    <button onClick={() => handleFollowClick(index)} className="btn btn-follow" type="button">Follow</button>
                 </div>
 
             </header>
 
-            <div className="Profile-comments tile">
-                <div className="comment">
-                    <p>comment here</p>
-                </div>
-                {/* <Comment /> */}
-            </div>
+            <Comments data={data.comments} />
         </div>
     )
 }

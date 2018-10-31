@@ -1,4 +1,3 @@
-
 [
     {
         "id"      : "hs01",
@@ -11,22 +10,28 @@
             "likes"          : 121,
             "following"      : 723,
             "followers"      : 4433,
-            "commentsNumber" : 0
+            "commentsNumber" : 0,
+            "doYouLike"      : false,
+            "doYouFollow"    : false
         },
+
         "comments": [
             {
+                "id"     : "01",
                 "author" : "Mike Ross",
                 "avatar" : "avatar.png",
                 "time"   : "1d",
                 "text"   : "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula."
             },
             {
+                "id"     : "02",
                 "author" : "Rachel Zein",
                 "avatar" : "avatar.png",
                 "time"   : "1d",
                 "text"   : "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula."
             },
             {
+                "id"     : "03",
                 "author" : "Louis Litt",
                 "avatar" : "avatar.png",
                 "time"   : "1d",
@@ -35,5 +40,3 @@
         ]
     }
 ]
-
-

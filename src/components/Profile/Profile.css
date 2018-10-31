@@ -1,18 +1,45 @@
-.Profile {
-
+.profile {
+    position: relative;
+    padding: 36px 17px;
+}
+.profile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    background-color: #002C71;
 }
 
-.tile {
-    background-color: #fff;
-    box-shadow: 0 0 4px 0 rgba(172, 172, 172, .5);
-    border-radius: 5px;
-}
-
-.Profile-header {
+/* profile header */
+.profile-header {
+    position: relative;
     padding: 20px 22px 20px 20px;
+    margin-bottom: 10px;
 }
 
-.Profile-header .img-wrapper {
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-info h3 {
+    font-size: 18px;
+    line-height: 24px;
+    color: #002C71;
+    letter-spacing: 0;
+    margin-bottom: 0;
+}
+.profile-info h3 a {
+    margin-left: 10px;
+}
+.profile-info .location {
+    font-size: 12px;
+    color: #8298B9;
+    margin: 0;
+}
+
+.profile-header .img-wrapper {
     display: inline-block;
     width: 70px;
     height: 70px;
@@ -20,37 +47,48 @@
     border-radius: 50%;
     margin-right: 18px;
 }
-.Profile-header .img-wrapper .Profile-img {
+.profile-header .img-wrapper .profile-img {
     height: 100%;
     width: auto;
+    filter: grayscale(100%);
+    transition: filter .4s;
+}
+.profile-header:hover .img-wrapper .profile-img {
+    filter: none;
 }
 
-.Profile-header .Profile-info .img-wrapper,
-.Profile-header .Profile-info .text-wrapper {
+.profile-header .profile-info .img-wrapper,
+.profile-header .profile-info .text-wrapper {
     float: left;
 }
 
-.Profile-header .Profile-info::after {
+.profile-header .profile-info::after {
     content: '';
     display: block;
     clear: both;
 }
 
-
-.Profile-header .Profile-stats .btn.btn-follow {
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #ffa640;
-    font-size: 14px;
-    letter-spacing: 4.2px;
-    border: 0;
-    border-radius: 100px;
-    padding: 14px 22px;
-    cursor: pointer;
+.profile-header .profile-stats .stats-elem {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 25px;
+}
+.profile-header .profile-stats .stats-elem:not(:first-child),
+.profile-header .profile-stats .btn {
+    margin-left: 28px;
+}
+.profile-header .profile-stats .stats-elem:not(:last-child) {
+    border-right: 1px solid rgba(151,151,151,.1);
 }
 
-
-
-.Profile-comments {
-    padding-top: 25px;
+.profile-stats .stats-elem .amount {
+    font-family: Montserrat-Regular;
+    font-size: 24px;
+    color: #FFA640;
+}
+.profile-stats .stats-elem .text {
+    display: block;
+    color: #343E00;
+    font-size: 10px;
+    line-height: 18px;
 }
