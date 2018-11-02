@@ -28,7 +28,7 @@ class App extends Component {
 
   handleLikeClick = (index) => {
     const profile = {...this.state.data[index]}
-
+    console.log(profile.stats.doYouLike)
     profile.stats.doYouLike = !profile.stats.doYouLike
 
     if (profile.stats.doYouLike) {

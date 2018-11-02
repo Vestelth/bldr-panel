@@ -22,7 +22,7 @@ const ProfileHeader = ({props, index, handleFollowClick, handleLikeClick}) => {
                 </div>
                 <div className="text-wrapper">
                     <h3>{props.user}
-                        <button className="like" onClick={(event) => handleLikeClick(event, index)}>
+                        <button className="like" onClick={(event) => handleLikeClick(index)}>
                             <i style={heartIcon} className="icon heart-icon" />
                         </button>
                     </h3>
