@@ -42,14 +42,27 @@ code {
   background-position: center;
   background-size: cover;
 }
-.icon.share-icon {
-  position: absolute;
-  top: 12px;
-  right: 12px;
+
+
+button.like,
+button.share {
+  border: 0;
+  background-color: transparent;
+  padding: 0 10px;
+  cursor: pointer;
 }
 
+button.btn:focus,
+button.like:focus,
+button.share:focus {
+  outline: none;
+}
 
-.btn {
+button.btn:focus {
+  /* background-color: #df7700; */
+}
+
+button.btn {
   text-transform: uppercase;
   color: #fff;
   background-color: #ffa640;
@@ -62,7 +75,8 @@ code {
   cursor: pointer;
   transition: background-color .2s;
 }
-.btn:hover {
+
+button.btn:hover {
   background-color: #df7700;
 }
 

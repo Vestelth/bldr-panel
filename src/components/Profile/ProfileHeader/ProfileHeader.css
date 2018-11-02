@@ -34,14 +34,8 @@
 }
 
 
-.profile-header .profile-stats .btn.btn-follow {
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #ffa640;
-    font-size: 14px;
-    letter-spacing: 4.2px;
-    border: 0;
-    border-radius: 100px;
-    padding: 14px 22px;
-    cursor: pointer;
+.profile-header .profile-info .share {
+    position: absolute;
+    top: 12px;
+    right: 12px;
 }

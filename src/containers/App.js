@@ -11,24 +11,40 @@ class App extends Component {
   }
 
   handleFollowClick = (index) => {
-    const profileData = {...this.state.data[index]}
+    const profile = {...this.state.data[index]}
+    
+    profile.stats.doYouFollow = !profile.stats.doYouFollow
 
-    profileData.stats.followers = parseInt(profileData.stats.followers) + 1
+    if (profile.stats.doYouFollow) {
+      profile.stats.followers = parseInt(profile.stats.followers) + 1
+    } else {
+      profile.stats.followers = parseInt(profile.stats.followers) - 1
+    }
 
     this.setState({
-      profileData
+      profile
     })
   }
 
-  handleLikeClick = (e, index) => {
-    e.preventDefault()
-    const profileData = {...this.state.data[index]}
+  handleLikeClick = (index) => {
+    const profile = {...this.state.data[index]}
 
-    profileData.stats.likes = parseInt(profileData.stats.likes) + 1
+    profile.stats.doYouLike = !profile.stats.doYouLike
+
+    if (profile.stats.doYouLike) {
+      profile.stats.likes = parseInt(profile.stats.likes) + 1
+    } else {
+      profile.stats.likes = parseInt(profile.stats.likes) - 1
+    }
 
     this.setState({
-      profileData
+      profile
     })
+  }
+
+  handleAddComment = (index) => {
+    const comments = { ...this.state.data[index] }
+    console.log(comments)
   }
   
   render() {
@@ -36,7 +52,7 @@ class App extends Component {
       return <Profile 
                 key={profile.id}
                 index={index}
-                data={profile}
+                props={profile}
                 handleFollowClick={this.handleFollowClick}
                 handleLikeClick={this.handleLikeClick}
               />
