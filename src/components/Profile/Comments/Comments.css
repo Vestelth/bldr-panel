@@ -8,10 +8,6 @@
     padding: 0 20px;
 }
 
-.add-comment {
-    
-}
-
 .single-comment .img-wrapper {
     display: inline-block;
     width: 70px;
@@ -28,4 +24,16 @@
 }
 .single-comment:hover .img-wrapper .profile-img {
     filter: none;
+}
+
+.add-comment + button.btn {
+    margin-left: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .6s;
+}
+.add-comment:focus + button.btn,
+.add-comment:active + button.btn {
+    visibility: visible;
+    opacity: 1;
 }

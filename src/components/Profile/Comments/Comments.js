@@ -1,36 +1,76 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './Comments.css'
 
-import img from '../../../assets/img/neil-hands.jpg'
+import SingleComment from './SingleComment/SingleComment'
 
-const Comments = ({ props }) => {
-    console.log(props)
-    
-    // const commentSort = () => {}
 
-    const comments = props.map((comment, index) => {
+class Comments extends Component {
+    state = {
+        inputText : '',
+        commentList : this.props.commentData
+    }
+
+    /*
+        TODO:
+        - handle sort comments
+        - handle comment addition date
+    */
+
+    handleCommentText = (e) => {
+        let inputText = e.target.value
+
+        this.setState({
+            inputText
+        })
+    }
+
+    handleSubmitComment = (e) => {
+        e.preventDefault()
+        let actualLength = this.state.commentList.length + 1
+
+        let id = this.state.commentList.length > 8 ? (
+                String(actualLength)
+            ) : (
+                '0' + actualLength
+            )
+
+        const newComment = {
+            id,
+            author: 'Me',
+            avatar: 'avatar.png',
+            time: 'day',
+            text: this.state.inputText
+        }
+
+        const commentList = [...this.state.commentList, newComment]
+
+        this.setState({
+            commentList
+        })
+    }
+
+    render () {
+        const comments = this.state.commentList.map((comment, index) => {
+            return (
+                <SingleComment key={index} props={comment} />
+            )
+        })
+
         return (
-            <div key={index} className="single-comment">
-                <div className="img-wrapper">
-                    <img className="profile-img" src={img} alt=""/>
-                </div>
-                <h3 className="author">{comment.author}</h3>
-                <span className="time">{comment.time}</span>
-                <p className="text">{comment.text}</p>
+            <div className="comments tile">
+                <a href="  " className="hide-comments">Hide comments (comments_number_here)</a>
+
+                {
+                    comments
+                }
+
+                <form onSubmit={this.handleSubmitComment} className="form add-comment">
+                    <input onInput={this.handleCommentText} type="text" placeholder="Add a comment" />
+                    <button className="btn">Add</button>
+                </form>
             </div>
         )
-    })
-
-    return (
-        <div className="comments tile">
-            {comments}
-
-            <form className="form add-comment">
-                <input type="text" placeholder="Add a comment" />
-                <button className="btn">Add</button>
-            </form>
-        </div>
-    )
+    }
 }
 
 export default Comments

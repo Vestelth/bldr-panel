@@ -4,11 +4,8 @@ import data from '../data.json'
 import Profile from '../components/Profile/Profile'
 
 class App extends Component {
-  state = {data}
-  
-  logData = () => {
-    console.log(this.state)
-  }
+  state = { data }
+
 
   handleFollowClick = (index) => {
     const profile = {...this.state.data[index]}
@@ -58,8 +55,6 @@ class App extends Component {
               />
     })
 
-    this.logData()
-      
     return (
       <div className="App">
         {renderProfiles}

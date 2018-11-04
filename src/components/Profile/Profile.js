@@ -7,7 +7,6 @@ import './Profile.css'
 
 
 const Profile = ({props, handleFollowClick, handleLikeClick, index}) => {
-    
 
     return (
         <div className="profile tile">
@@ -18,7 +17,7 @@ const Profile = ({props, handleFollowClick, handleLikeClick, index}) => {
                 handleLikeClick={handleLikeClick}
             />
 
-            <Comments props={props.comments} />
+            <Comments commentData={props.comments} />
         </div>
     )
 }
