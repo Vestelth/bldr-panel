@@ -8,7 +8,7 @@ import './Comments.css'
 class Comments extends Component {
   state = {
     inputText : '',
-    showComments : true,
+    hideComments : false,
     commentList : this.props.commentData
   }
 
@@ -43,16 +43,31 @@ class Comments extends Component {
     })
   }
 
+  handleHideComments = (e) => {
+    e.preventDefault()
+    console.log('handle hide comments init');
+
+    this.setState({
+      hideComments: !this.state.hideComments
+    })
+  }
+
   render () {
+    const commentsHidden = this.state.hideComments ? 'hidden' : ''
+
+
     const comments = this.state.commentList.map((comment, index) => {
       return <SingleComment key={comment.id} props={comment} />
     })
 
     return (
       <div className="comments tile">
-        <a href="" className="hide-comments">Hide comments ({this.state.commentList.length})</a>
+        <button
+          className="toggle-comments"
+          onClick={this.handleHideComments}>
+          {this.state.hideComments ? 'Show' : 'Hide'} comments ({this.state.commentList.length})</button>
 
-        <div className="comment-list">
+        <div className={`comment-list ${commentsHidden}`}>
           { comments }
         </div>
 

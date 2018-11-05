@@ -14,12 +14,12 @@
 
 
 body {
+  font-size: 14px;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat-Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: lightgray;
 }
 
 code {
@@ -58,10 +58,6 @@ button.share:focus {
   outline: none;
 }
 
-button.btn:focus {
-  /* background-color: #df7700; */
-}
-
 button.btn {
   text-transform: uppercase;
   color: #fff;
@@ -88,18 +84,24 @@ input[type="text"] {
 }
 input[type="text"]:focus {
   outline: 0;
-  border-bottom-color: #002C71;
+  border-bottom-color: #002c71;
 }
 
 input[type="text"]::placeholder {
+  position: relative;
+  top: -2px;
+  color: #8298b9;
   font-family: Montserrat-Regular;
   font-size: 18px;
-  color: #8298B9;
   transition: all .3s;
 }
 input[type="text"]:hover::placeholder {
-  color: #002C71;
+  color: #002c71;
 }
 input[type="text"]:focus::placeholder {
-  color: #8298B9;
+  color: #8298b9;
+}
+
+input[type="text"] + button.btn {
+  margin-left: 15px;
 }

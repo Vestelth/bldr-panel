@@ -12,9 +12,14 @@ const SingleComment = ({props}, index) => {
       <div className="img-wrapper">
         <img className="profile-img" src={img} alt=""/>
       </div>
-      <h3 className="author">{props.author}</h3>
-      <span className="time">{time}</span>
-      <p className="text">{props.text}</p>
+
+      <div className="text-box">
+        <h3 className="author">
+          {props.author}
+          <span className="time">{time}</span>
+        </h3>
+        <p className="text">{props.text}</p>
+      </div>
     </div>
   )
 }
