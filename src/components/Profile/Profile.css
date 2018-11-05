@@ -1,8 +1,9 @@
 .profile {
     position: relative;
     padding: 36px 17px;
-    max-width: 500px;
-    max-height: 797px;
+    max-width: 466px;
+    max-height: 725px;
+    margin-top: 25px;
 }
 .profile::before {
     content: '';
@@ -43,6 +44,10 @@
 }
 
 .profile-header .img-wrapper {
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
     display: inline-block;
     width: 70px;
     height: 70px;
@@ -50,6 +55,13 @@
     border-radius: 50%;
     margin-right: 18px;
 }
+@media only screen and (min-width: 480px) {
+    .profile-header .img-wrapper {
+        position: static;
+        transform: none;
+    }
+}
+
 .profile-header .img-wrapper .profile-img {
     height: 100%;
     width: auto;
