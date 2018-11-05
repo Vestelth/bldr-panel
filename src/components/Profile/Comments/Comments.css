@@ -1,5 +1,6 @@
 /* comments */
 .comments {
+    transition: all .5s;
     padding: 25px 0 32px;
 }
 
