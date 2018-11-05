@@ -9,7 +9,7 @@ class App extends Component {
 
   handleFollowClick = (index) => {
     const profile = {...this.state.data[index]}
-    
+
     profile.stats.doYouFollow = !profile.stats.doYouFollow
 
     if (profile.stats.doYouFollow) {
@@ -43,10 +43,10 @@ class App extends Component {
     const comments = { ...this.state.data[index] }
     console.log(comments)
   }
-  
+
   render() {
     const renderProfiles = this.state.data.map((profile, index) => {
-      return <Profile 
+      return <Profile
                 key={profile.id}
                 index={index}
                 props={profile}

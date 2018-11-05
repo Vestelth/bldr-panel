@@ -1,42 +1,42 @@
 [
-    {
-        "id"      : "hs01",
-        "user"    : "Neil De Grasse",
-        "img"     : "neil-hands.jpg",
-        "city"    : "New York",
-        "country" : "USA",
+  {
+    "id"      : "hs01",
+    "user"    : "Neil De Grasse",
+    "img"     : "neil-hands.jpg",
+    "city"    : "New York",
+    "country" : "USA",
 
-        "stats"   : {
-            "likes"          : 121,
-            "following"      : 723,
-            "followers"      : 4433,
-            "commentsNumber" : 0,
-            "doYouLike"      : false,
-            "doYouFollow"    : false
-        },
+    "stats"   : {
+      "likes"          : 121,
+      "following"      : 723,
+      "followers"      : 4433,
+      "commentsNumber" : 0,
+      "doYouLike"      : false,
+      "doYouFollow"    : false
+    },
 
-        "comments": [
-            {
-                "id"     : "01",
-                "author" : "Mike Ross",
-                "avatar" : "avatar.png",
-                "time"   : "1d",
-                "text"   : "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula."
-            },
-            {
-                "id"     : "02",
-                "author" : "Rachel Zein",
-                "avatar" : "avatar.png",
-                "time"   : "1d",
-                "text"   : "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula."
-            },
-            {
-                "id"     : "03",
-                "author" : "Louis Litt",
-                "avatar" : "avatar.png",
-                "time"   : "1d",
-                "text"   : "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula."
-            }
-        ]
-    }
+    "comments": [
+      {
+        "id"     : "01",
+        "author" : "Mike Ross",
+        "avatar" : "avatar.png",
+        "time"   : "2018-10-29",
+        "text"   : "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula."
+      },
+      {
+        "id"     : "02",
+        "author" : "Rachel Zein",
+        "avatar" : "avatar.png",
+        "time"   : "2018-10-30",
+        "text"   : "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula."
+      },
+      {
+        "id"     : "03",
+        "author" : "Louis Litt",
+        "avatar" : "avatar.png",
+        "time"   : "2018-10-31",
+        "text"   : "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula."
+      }
+    ]
+  }
 ]
