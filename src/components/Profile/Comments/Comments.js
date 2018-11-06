@@ -6,10 +6,14 @@ import './Comments.css'
 
 
 class Comments extends Component {
-  state = {
-    inputText : '',
-    hideComments : false,
-    commentList : this.props.commentData
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      inputText : '',
+      hideComments : false,
+      commentList : props.commentData
+    }
   }
 
   handleCommentText = (e) => {
@@ -21,11 +25,11 @@ class Comments extends Component {
 
   handleSubmitComment = (e) => {
     e.preventDefault()
-    let actualLength = this.state.commentList.length + 1
+    let actualLen = this.state.commentList.length + 1
     let id = this.state.commentList.length > 8 ? (
-        String(actualLength)
+        String(actualLen)
       ) : (
-        '0' + actualLength
+        '0' + actualLen
       )
 
     const newComment = {
@@ -45,7 +49,6 @@ class Comments extends Component {
 
   handleHideComments = (e) => {
     e.preventDefault()
-    console.log('handle hide comments init');
 
     this.setState({
       hideComments: !this.state.hideComments
@@ -73,7 +76,6 @@ class Comments extends Component {
 
         <form onSubmit={this.handleSubmitComment} className="form add-comment">
           <input onInput={this.handleCommentText} type="text" placeholder="Add a comment" />
-          <button className="btn">Add</button>
         </form>
       </div>
     )

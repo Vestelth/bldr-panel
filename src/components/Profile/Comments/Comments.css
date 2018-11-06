@@ -30,7 +30,7 @@
     margin-bottom: 0;
     cursor: pointer;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 540px) {
     .toggle-comments {
         text-align: left;
     }

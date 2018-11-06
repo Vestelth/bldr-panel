@@ -1,9 +1,15 @@
 .profile {
     position: relative;
     padding: 36px 17px;
-    max-width: 466px;
     max-height: 725px;
+    max-width: 286px;
     margin-top: 25px;
+    margin: 25px auto;
+}
+@media only screen and (min-width: 540px) {
+    .profile {
+        max-width: 466px;
+    }
 }
 .profile::before {
     content: '';
@@ -14,98 +20,4 @@
     height: 95px;
     border-radius: 5px 5px 0 0;
     background-color: #002C71;
-}
-
-/* profile header */
-.profile-header {
-    position: relative;
-    padding: 20px 22px 20px 20px;
-    margin-bottom: 10px;
-}
-
-.profile-info {
-    margin-bottom: 20px;
-}
-
-.profile-info h3 {
-    font-size: 18px;
-    line-height: 24px;
-    color: #002C71;
-    letter-spacing: 0;
-    margin-bottom: 0;
-}
-.profile-info h3 a {
-    margin-left: 10px;
-}
-.profile-info .location {
-    font-size: 12px;
-    color: #8298B9;
-    margin: 0;
-}
-
-.profile-header .img-wrapper {
-    position: absolute;
-    top: -48px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-right: 18px;
-}
-@media only screen and (min-width: 480px) {
-    .profile-header .img-wrapper {
-        position: static;
-        transform: none;
-    }
-}
-
-.profile-header .img-wrapper .profile-img {
-    height: 100%;
-    width: auto;
-    filter: grayscale(100%);
-    transition: filter .4s;
-}
-.profile-header:hover .img-wrapper .profile-img {
-    filter: none;
-}
-
-.profile-header .profile-info .img-wrapper,
-.profile-header .profile-info .text-wrapper {
-    float: left;
-}
-
-.profile-header .profile-info::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.profile-header .profile-stats {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.profile-header .profile-stats .stats-elem {
-    display: inline-block;
-    vertical-align: middle;
-    padding-right: 25px;
-}
-.profile-header .profile-stats .stats-elem:not(:last-child) {
-    border-right: 1px solid rgba(151,151,151,.1);
-}
-
-.profile-stats .stats-elem .amount {
-    font-family: Montserrat-Regular;
-    font-size: 24px;
-    color: #ffa640;
-}
-.profile-stats .stats-elem .text {
-    display: block;
-    color: #343e00;
-    font-size: 10px;
-    line-height: 21px;
 }

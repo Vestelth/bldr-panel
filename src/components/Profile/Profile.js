@@ -1,23 +1,16 @@
 import React from 'react'
+import data from '../../data.json'
 
 import Comments from './Comments/Comments'
 import ProfileHeader from './ProfileHeader/ProfileHeader'
 
 import './Profile.css'
 
-
-const Profile = ({props, handleFollowClick, handleLikeClick, index}) => {
-
+const Profile = () => {
   return (
     <div className="profile tile">
-      <ProfileHeader
-        index={index}
-        props={props}
-        handleFollowClick={handleFollowClick}
-        handleLikeClick={handleLikeClick}
-      />
-
-      <Comments commentData={props.comments} />
+      <ProfileHeader data={data}/>
+      <Comments commentData={data.comments} />
     </div>
   )
 }

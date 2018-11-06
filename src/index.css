@@ -81,8 +81,10 @@ input[type="text"] {
   border: 0;
   border-bottom: 2px solid #dbe0e8;
   transition: all .3s;
+  width: 100%;
 }
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="text"]:hover {
   outline: 0;
   border-bottom-color: #002c71;
 }
@@ -95,13 +97,6 @@ input[type="text"]::placeholder {
   font-size: 18px;
   transition: all .3s;
 }
-input[type="text"]:hover::placeholder {
-  color: #002c71;
-}
 input[type="text"]:focus::placeholder {
   color: #8298b9;
-}
-
-input[type="text"] + button.btn {
-  margin-left: 15px;
 }
