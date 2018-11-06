@@ -4,7 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Montserrat-SemiBold';
   src: local('Montserrat Semibold'), url('./assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
@@ -20,11 +19,6 @@ body {
   font-family: 'Montserrat-Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .tile {
