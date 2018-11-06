@@ -32,7 +32,7 @@
     position: relative;
     font-size: 18px;
     line-height: 24px;
-    color: #002C71;
+    color: #002c71;
     letter-spacing: 0;
     margin-bottom: 0;
 }
@@ -48,11 +48,28 @@
 }
 .profile-header button.share .share-popup {
     display: none;
+    position: absolute;
+    top: -40px;
+    right: -15px;
+    color: #002c71;
+    font-family: 'Montserrat-Regular';
+    font-style: italic;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ffa640;
+    border-radius: 100px;
+}
+.profile-header button.share .share-popup.visible {
+    display: block;
 }
 @media only screen and (min-width: 540px) {
     .profile-header button.share {
         top: 12px;
         right: 0;
+    }
+    .profile-header button.share .share-popup {
+        top: 12px;
+        right: 14px;
     }
 }
 

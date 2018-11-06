@@ -1,11 +1,12 @@
 /* comments */
 .comments {
     padding: 25px 0 32px;
+    margin-bottom: 40px;
 }
 
 .comment-list {
-    overflow-y: auto;
-	max-height: 674px;
+    height: 532px;
+    max-height: 532px;
 	transition-property: all;
 	transition-duration: .5s;
 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);

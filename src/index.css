@@ -87,7 +87,7 @@ input[type="text"]::placeholder {
   position: relative;
   top: -2px;
   color: #8298b9;
-  font-family: Montserrat-Regular;
+  font-family: 'Montserrat-Regular';
   font-size: 18px;
   transition: all .3s;
 }
